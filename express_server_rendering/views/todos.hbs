@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/todos" method="POST"> {{!action means my form will submit to this url and method is post so our data will go as post request}}
+        <input name="newtodo">
+        <input type="submit">
+    </form>
+    <ul>
+        {{#each todos as |todo|}}{{!handle bar syntax with double brackets}}
+            <li>{{todo.task}}</li>
+        {{/each}}{{!whatever we write in this each block will be repeated for each element in todos array}}
+    </ul>
+</body>
+</html>
